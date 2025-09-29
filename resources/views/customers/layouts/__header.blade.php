@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Restoranku</title>
+        <title>PARID KUPI</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -19,12 +19,12 @@
 
         <!-- Libraries Stylesheet -->
         <link href="{{ asset('assets/customer/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/customer/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/customer/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('assets/customer/css/bootstrap.min.css') }}" rel="stylesheet">
+            <!-- Customized Bootstrap Stylesheet -->
+        <link href="{{ asset('assets/customer/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="{{ asset('assets/customer/css/style.css') }}" rel="stylesheet">
+        <!-- Template Stylesheet -->
+        <link href="{{ asset('assets/customer/css/style.css') }}" rel="stylesheet">
     </head>
