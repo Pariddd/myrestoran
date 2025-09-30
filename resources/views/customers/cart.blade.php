@@ -154,7 +154,7 @@
                   </div>
                   <div class="d-flex justify-content-end">
                       <div class="mb-3">
-                          <a href="checkout.html" class="btn border-secondary py-3 text-primary text-uppercase mb-4" type="button">Lanjut ke Pembayaran</a>
+                          <a href="{{ route('checkout') }}" class="btn border-secondary py-3 text-primary text-uppercase mb-4" type="button">Lanjut ke Pembayaran</a>
                       </div>
                   </div>
               </div>
