@@ -10,10 +10,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="d-flex justify-content-end pt-3">
-                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/codepolitan/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://tiktok.com/@codepolitan.com"><i class="fab fa-tiktok"></i></a>
-                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.youtube.com/@codepolitan"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href="https://id.linkedin.com/company/codepolitan"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/paridxd/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://github.com/Pariddd"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://wa.me/6282318204045"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
