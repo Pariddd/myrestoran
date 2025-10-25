@@ -42,5 +42,7 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+
+    @yield('script')
 </body>
 </html>
