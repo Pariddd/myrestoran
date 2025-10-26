@@ -1,6 +1,12 @@
 @extends('customers.layouts.master')
 
 @section('content')
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Keranjang</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item active text-primary">Silakan periksan pesanan menu anda</li>
+    </ol>
+</div>
 <div class="container-fluid py-5">
     <div class="container py-5">
     @if (session('success'))
@@ -94,13 +100,11 @@
                         <div class="d-flex justify-content-between mb-4">
                             <h5 class="mb-0 me-4">Subtotal</h5>
                             <p class="mb-0">Rp{{ number_format($subTotal, 0, ',','.') }}</p>
-                            <p class="mb-0">Rp Harga</p>
                         </div>
                         <div class="d-flex justify-content-between">
                             <p class="mb-0 me-4">Pajak (10%)</p>
                             <div class="">
                                 <p class="mb-0">Rp{{ number_format($tax, 0, ',','.') }}</p>
-                            <p class="mb-0">Rp Harga</p>
                             </div>
                         </div>
                     </div>
