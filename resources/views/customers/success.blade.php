@@ -57,7 +57,9 @@
         <p class="small text-center">Pembayaran Sukses, pesanan akan segera diproses!</p>
     @endif
     <hr>
-    <a href="{{ route('menu') }}" class="btn btn-info w-100">Kembali ke menu</a>
+    <a href="{{ route('menu') }}" class="btn btn-info w-100 text-white">
+      <i class="fa fa-home  me-2"></i>Kembali ke Menu
+    </a>
   </div>
 </div>
 
