@@ -12,7 +12,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
+        $items = Item::orderBy('name', 'asc')->get();
         return view('admin.item.index', compact('items'));
     }
 
