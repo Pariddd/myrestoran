@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,9 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::orderBy('cat_name', 'asc')->get();
+
+        return view('admin.item.create', compact('categories'));
     }
 
     /**
