@@ -32,7 +32,37 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'description' => 'nullable|string',
+                'price' => 'required|numeric|min:0',
+                'category_id' => 'required|exists:categories,id',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'is_active' => 'required|boolean',
+            ],
+            [
+                'name.required' => 'The item name is required.',
+                'description.string' => 'The description must be a string.',
+                'price.required' => 'The price is required.',
+                'category_id.required' => 'The category is required.',
+                'image.image' => 'The image must be an image file.',
+                'image.max' => 'The image size must not exceed 2MB.',
+                'is_active.required' => 'The active status is required.',
+                'is_active.boolean' => 'The active status must be true or false.',
+            ]
+        );
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('img_item_upload'), $imageName);
+            $validatedData['image'] = $imageName;
+        }
+
+        $item = Item::create($validatedData);
+
+        return redirect()->route('items.index')->with('success', 'Item created successfully.');
     }
 
     /**
@@ -48,7 +78,10 @@ class ItemController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $item = Item::findOrFail($id);
+        $categories = Category::orderBy('cat_name', 'asc')->get();
+
+        return view('admin.item.edit', compact('item', 'categories'));
     }
 
     /**
@@ -56,7 +89,38 @@ class ItemController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'description' => 'nullable|string',
+                'price' => 'required|numeric|min:0',
+                'category_id' => 'required|exists:categories,id',
+                'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'is_active' => 'required|boolean',
+            ],
+            [
+                'name.required' => 'The item name is required.',
+                'description.string' => 'The description must be a string.',
+                'price.required' => 'The price is required.',
+                'category_id.required' => 'The category is required.',
+                'image.image' => 'The image must be an image file.',
+                'image.max' => 'The image size must not exceed 2MB.',
+                'is_active.required' => 'The active status is required.',
+                'is_active.boolean' => 'The active status must be true or false.',
+            ]
+        );
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('img_item_upload'), $imageName);
+            $validatedData['image'] = $imageName;
+        }
+
+        $item = Item::findOrFail($id);
+        $item->update($validatedData);
+
+        return redirect()->route('items.index')->with('success', 'Item updated successfully.');
     }
 
     /**
