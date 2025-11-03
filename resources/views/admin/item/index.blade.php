@@ -23,12 +23,12 @@
     </div>
     <section class="section">
         <div class="card">
-          {{-- @if (session('success'))
+          @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <p><i class="bi bi-check-circle-fill"></i> {{ session('success') }}</p>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-          @endif --}}
+          @endif
           <table class="table table-striped" id="table1">
             <thead>
               <tr>
@@ -66,6 +66,13 @@
                       <a href="{{ route('items.edit', $item->id) }}" class="btn btn-warning btn-sm">
                         <i class="bi bi-pencil"></i> Ubah
                       </a>
+                      <form action="{{ route('items.destroy', $item->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda ingin menghapus menu ini?')">
+                          <i class="bi bi-trash"></i> Hapus
+                        </button>
+                      </form>
                     </td>
                     <td>
                       {{-- @if ($item->is_active == 1)
