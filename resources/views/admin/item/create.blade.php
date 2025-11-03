@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Daftar Menu')
+@section('title', 'Add Menu')
 
 @section('content')
 <div class="page-title">
