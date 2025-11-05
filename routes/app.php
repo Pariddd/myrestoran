@@ -29,7 +29,6 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['role:admin'])->group(function () {
     Route::resource('categories', CategoryController::class);
-    Route::resource('items', ItemController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 });
@@ -38,7 +37,12 @@ Route::middleware(['role:admin|cashier|chef'])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
-    Route::post('/items/update-status/{order}', [ItemController::class, 'updateStatus'])->name('items.updateStatus');
+    // Route::post('/items/update-status/{order}', [ItemController::class, 'updateStatus'])->name('items.updateStatus');
+    // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('orders', OrderController::class);
+    Route::post('items/update-status/{order}', [ItemController::class, 'updateStatus'])->name('items.updateStatus');
+    Route::resource('items', ItemController::class);
+    Route::post('orders/{order}', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
 });
 
 Route::resource('categories', CategoryController::class);
