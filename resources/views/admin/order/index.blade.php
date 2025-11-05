@@ -68,7 +68,7 @@
                             </a>
                         </span>
                     </td>
-                     <td>
+                    <td>
                         @if (Auth::user()->role->role_name == 'admin' || Auth::user()->role->role_name == 'cashier')
                           @if ($order->status == 'pending' && $order->payment_method == 'tunai')
                             <form action="{{ route('orders.updateStatus', $order->id) }}" method="POST">

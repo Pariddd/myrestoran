@@ -4,7 +4,7 @@
 <div class="container-fluid page-header py-5">
     <h1 class="text-center text-white display-6">Checkout</h1>
     <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item active text-primary">Silakan isi detail pemesanan anda</li>
+        <li class="breadcrumb-item active text-info">Silakan isi detail pemesanan anda</li>
     </ol>
 </div>
   <div class="container-fluid py-5">
@@ -114,11 +114,11 @@
                                     <h5 class="mb-0 ps-4 me-4">Metode Pembayaran</h5>
                                     <div class="mb-3 pe-5">
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input bg-primary border-0" id="qris" name="payment_method" value="qris">
+                                            <input type="radio" class="form-check-input bg-info border-0" id="qris" name="payment_method" value="qris">
                                             <label class="form-check-label" for="qris">QRIS</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input bg-primary border-0" id="cash" name="payment_method" value="tunai">
+                                            <input type="radio" class="form-check-input bg-info border-0" id="cash" name="payment_method" value="tunai">
                                             <label class="form-check-label" for="cash">Tunai</label>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button id="pay-button" type="button" class="btn border-secondary py-3 text-uppercase text-primary">Konfirmasi Pesanan</button> 
+                                <button id="pay-button" type="button" class="btn border-secondary py-3 text-uppercase text-info">Konfirmasi Pesanan</button> 
                             </div>
                             
                         </div>

@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::orderBy('role_name', 'asc')->get();
+        $roles = Role::where('role_name', '!=', 'customer')->orderBy('role_name', 'asc')->get();
 
         return view('admin.user.create', compact('roles'));
     }

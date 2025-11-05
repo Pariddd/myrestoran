@@ -4,7 +4,7 @@
 <div class="container-fluid page-header py-5">
     <h1 class="text-center text-white display-6">Keranjang</h1>
     <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item active text-primary">Silakan periksan pesanan menu anda</li>
+        <li class="breadcrumb-item active text-info">Silakan periksan pesanan menu anda</li>
     </ol>
 </div>
 <div class="container-fluid py-5">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="d-flex justify-content-end">
                     <div class="mb-3">
-                        <a href="{{ route('checkout') }}" class="btn border-secondary py-3 text-primary text-uppercase mb-4" type="button">Lanjut ke Pembayaran</a>
+                        <a href="{{ route('checkout') }}" class="btn border-secondary py-3 text-info text-uppercase mb-4" type="button">Lanjut ke Pembayaran</a>
                     </div>
                 </div>
             </div>
