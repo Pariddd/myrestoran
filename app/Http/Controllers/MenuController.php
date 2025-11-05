@@ -129,6 +129,7 @@ class MenuController extends Controller
         $validator = Validator::make($request->all(), [
             'fullname' => 'required|string|max:255',
             'phone' => 'required|string|max:15',
+            'notes' => 'nullable|string|max:500',
         ]);
 
         if ($validator->fails()) {
@@ -163,6 +164,8 @@ class MenuController extends Controller
             'status' => 'pending',
             'table_number' => $tableNumber,
             'payment_method' => $request->payment_method,
+            'payment_method' => $request->payment_method,
+            'notes' => $request->input('notes'),
         ]);
 
         foreach ($cart as $itemId => $item) {
